@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Chamomile",
+        "properties": "Mild, floral aroma; known for calming effects",
+        "common_effects": ["relaxation", "improved sleep"]
+    },
+    {
+        "name": "Lavender",
+        "properties": "Soothing fragrance; commonly used for relaxation and stress relief",
+        "common_effects": ["stress relief", "relaxation"]
+    }
+]
