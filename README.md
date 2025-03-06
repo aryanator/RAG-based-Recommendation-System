@@ -50,14 +50,6 @@ recommendation-system/
 
 1. **`index.html`**: A basic HTML file for the frontend interface. It provides a simple form for users to input their query and select the number of recommendations they want to receive. It sends requests to the backend API when the user clicks the buttons.
 
-2. **`script.js`**: JavaScript file that handles the user interaction. It fetches product recommendations by calling the API's `/recommend` or `/rag_recommend` endpoints and displays the results in the browser.
-
-3. **`style.css`**: Basic CSS file for styling the frontend. It ensures that the UI elements are displayed neatly and allows the user to interact with the app.
-
-#### **mock_data/**
-
-1. **`products.json`**: A JSON file containing mock product data. This data is used by the recommendation algorithm to generate recommendations. The products include attributes such as name, type, description, and effects.
-
 ### How to Run the Prototype
 
 #### Prerequisites
