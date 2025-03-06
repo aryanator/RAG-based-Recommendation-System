@@ -71,7 +71,7 @@ recommendation-system/
 To interact with the Mistral model, you need a Hugging Face API token. **Do not hardcode your token directly** in the code for security purposes.
 
 - **Option 1: Use a placeholder**  
-  Open the `main.py` file and replace the `YOUR_HUGGING_FACE_TOKEN` placeholder with your actual Hugging Face token.
+  Open the `rag_recommend.py` file and replace the `YOUR_HUGGING_FACE_TOKEN` placeholder with your actual Hugging Face token.
   
   ```python
   token = "YOUR_HUGGING_FACE_TOKEN"
