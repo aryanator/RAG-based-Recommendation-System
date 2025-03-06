@@ -19,7 +19,7 @@ The project includes the following components:
 recommendation-system/
 ├── data/                      # Contains any data files used in the project
 ├── env/                       # Virtual environment for the project
-├── Images/                    # Images used for the frontend (if any)
+├── Images/                    # Evidence
 ├── vector_db/                 # Contains the FAISS index and metadata
 ├── __pycache__/               # Compiled Python files (auto-generated)
 ├── create_vector_db.py        # Script to create the FAISS vector database
