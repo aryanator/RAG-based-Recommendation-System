@@ -17,21 +17,19 @@ The project includes the following components:
 
 ```plaintext
 recommendation-system/
-│
-├── backend/
-│   ├── main.py                # FastAPI server with endpoints for normal and RAG recommendations
-│   ├── recommend.py           # Contains the normal recommendation algorithm
-│   └── rag_recommend.py       # Contains the RAG-based recommendation logic (LLM generation)
-│
-├── frontend/
-│   ├── index.html             # Simple HTML frontend to interact with the FastAPI backend
-│   ├── script.js              # JavaScript for sending requests to the API and displaying results
-│   └── style.css              # Basic CSS styling for the frontend
-│
-├── mock_data/
-│   ├── products.json          # Mock product data used for recommendations
-│
-└── README.md                  # Project documentation
+├── data/                      # Contains any data files used in the project
+├── env/                       # Virtual environment for the project
+├── Images/                    # Images used for the frontend (if any)
+├── vector_db/                 # Contains the FAISS index and metadata
+├── __pycache__/               # Compiled Python files (auto-generated)
+├── create_vector_db.py        # Script to create the FAISS vector database
+├── frontend.html              # Frontend interface for user interaction
+├── GoogleNews-vectors-negative300.bin  # Pre-trained word vectors (used for embeddings)
+├── main.py                    # FastAPI application (contains endpoints for normal and RAG recommendations)
+├── rag_recommend.py           # Contains functions for RAG-based recommendation and text generation using LLM
+├── recommend.py               # Contains functions for normal product recommendation based on user queries
+├── test_llm.py                # Script to test LLM and RAG functionality (optional)
+
 ```
 
 ### File Descriptions
