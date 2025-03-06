@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Recommendation App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        #recommendations {
+            margin-top: 20px;
+        }
+        .recommendation {
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Product Recommendation System</h1>
+
+    <div>
+        <label for="user-query">Enter your query:</label>
+        <input type="text" id="user-query" placeholder="E.g., help me with digestion..." />
+    </div>
+
+    <button id="normal-btn">Get Normal Recommendations</button>
+    <button id="rag-btn">Get RAG Recommendations</button>
+
+    <div id="recommendations"></div>
+
+    <script>
+        // Function to send request and update recommendations
+        async function getRecommendations(endpoint, query) {
+            const response = await fetch(`http://127.0.0.1:8000${endpoint}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ query: query, top_k: 3 }),
+            });
+            const data = await response.json();
+            return data;
+        }
+
+        // Display recommendations on the page
+        function displayRecommendations(recommendations, ragDescription = '') {
+            const recommendationsDiv = document.getElementById('recommendations');
+            recommendationsDiv.innerHTML = '';  // Clear previous recommendations
+
+            recommendations.forEach((product) => {
+                const productDiv = document.createElement('div');
+                productDiv.classList.add('recommendation');
+                productDiv.innerHTML = `
+                    <strong>${product.name}</strong><br>
+                    ${product.description}<br>
+                    <em>Effects: ${product.effects.join(', ')}</em><br>
+                    <em>Ingredients: ${product.ingredients.join(', ')}</em>
+                `;
+                recommendationsDiv.appendChild(productDiv);
+            });
+
+            if (ragDescription) {
+                const ragDiv = document.createElement('div');
+                ragDiv.classList.add('recommendation');
+                ragDiv.innerHTML = `<strong>RAG Generated Description:</strong><br>${ragDescription}`;
+                recommendationsDiv.appendChild(ragDiv);
+            }
+        }
+
+        // Normal Recommendation Button Click
+        document.getElementById('normal-btn').onclick = async function () {
+            const query = document.getElementById('user-query').value;
+            if (query) {
+                const response = await getRecommendations('/recommend', query);
+                displayRecommendations(response.recommendations);
+            } else {
+                alert('Please enter a query.');
+            }
+        };
+
+        // RAG Recommendation Button Click
+        document.getElementById('rag-btn').onclick = async function () {
+            const query = document.getElementById('user-query').value;
+            if (query) {
+                const response = await getRecommendations('/rag_recommend', query);
+                displayRecommendations(response.recommendations, response.rag_description);
+            } else {
+                alert('Please enter a query.');
+            }
+        };
+    </script>
+
+</body>
+</html>
