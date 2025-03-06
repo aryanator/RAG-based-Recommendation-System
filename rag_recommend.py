@@ -4,7 +4,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 
 # Load Model
 model_name = "mistralai/Mistral-7B-Instruct-v0.1"
-huggingface_token = "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"  # Replace with your actual token
+huggingface_token = "YOUR_HUGGING_FACE_TOKEN"  # Replace with your actual token
 
 tokenizer = AutoTokenizer.from_pretrained(model_name, use_auth_token=huggingface_token)
 model = AutoModelForCausalLM.from_pretrained(model_name, use_auth_token=huggingface_token, device_map="auto")
