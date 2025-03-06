@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Chamomile",
+        "properties": "Mild, floral aroma; known for calming effects.",
+        "common_effects": ["relaxation", "improved sleep"],
+        "usage_notes": "Commonly used in bedtime teas to promote sleep and reduce anxiety."
+    },
+    {
+        "name": "Lavender",
+        "properties": "Soothing fragrance; commonly used for relaxation and stress relief.",
+        "common_effects": ["stress relief", "relaxation"],
+        "usage_notes": "Often blended with chamomile to enhance relaxation effects."
+    },
+    {
+        "name": "Valerian Root",
+        "properties": "Strong, earthy aroma; known for its sedative effects.",
+        "common_effects": ["sleep support", "anxiety relief"],
+        "usage_notes": "Effective in promoting deep sleep but may have a strong taste."
+    },
+    {
+        "name": "Ginseng",
+        "properties": "Bitter and earthy; used for boosting energy and cognitive function.",
+        "common_effects": ["energy", "focus"],
+        "usage_notes": "Often found in morning teas and energy drinks."
+    },
+    {
+        "name": "Ginger",
+        "properties": "Warm and spicy; aids digestion and reduces nausea.",
+        "common_effects": ["digestion", "anti-inflammatory"],
+        "usage_notes": "Often combined with peppermint for digestive relief."
+    }
+]

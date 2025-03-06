@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Relaxation Tea",
+        "type": "beverage",
+        "description": "A soothing herbal tea blend.",
+        "effects": ["relaxation", "stress relief"],
+        "ingredients": ["Chamomile", "Lavender"],
+        "price": 12.99
+    },
+    {
+        "id": 2,
+        "name": "Sleep Well Tea",
+        "type": "beverage",
+        "description": "A calming bedtime herbal tea.",
+        "effects": ["sleep support", "relaxation"],
+        "ingredients": ["Valerian Root", "Chamomile", "Peppermint"],
+        "price": 14.99
+    },
+    {
+        "id": 3,
+        "name": "Focus Boost Tea",
+        "type": "beverage",
+        "description": "An energizing blend to enhance mental clarity.",
+        "effects": ["focus", "energy"],
+        "ingredients": ["Green Tea", "Ginseng", "Ginkgo Biloba"],
+        "price": 11.99
+    },
+    {
+        "id": 4,
+        "name": "Digestive Comfort Tea",
+        "type": "beverage",
+        "description": "A herbal tea blend for digestive wellness.",
+        "effects": ["digestion", "bloating relief"],
+        "ingredients": ["Ginger", "Peppermint", "Fennel"],
+        "price": 13.49
+    }
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "product_id": 1,
+        "daily_sales": [
+            {"date": "2025-03-01", "units_sold": 15},
+            {"date": "2025-03-02", "units_sold": 12},
+            {"date": "2025-03-03", "units_sold": 18}
+        ]
+    },
+    {
+        "product_id": 2,
+        "daily_sales": [
+            {"date": "2025-03-01", "units_sold": 9},
+            {"date": "2025-03-02", "units_sold": 10},
+            {"date": "2025-03-03", "units_sold": 11}
+        ]
+    },
+    {
+        "product_id": 3,
+        "daily_sales": [
+            {"date": "2025-03-01", "units_sold": 20},
+            {"date": "2025-03-02", "units_sold": 22},
+            {"date": "2025-03-03", "units_sold": 25}
+        ]
+    },
+    {
+        "product_id": 4,
+        "daily_sales": [
+            {"date": "2025-03-01", "units_sold": 8},
+            {"date": "2025-03-02", "units_sold": 6},
+            {"date": "2025-03-03", "units_sold": 10}
+        ]
+    }
+]
