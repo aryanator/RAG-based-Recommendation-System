@@ -130,6 +130,29 @@ recommendation-system/
   
 - **RAG Implementation**: The Retrieval-Augmented Generation (RAG) approach uses the products retrieved from the normal recommendation step and feeds them to an LLM (e.g., GPT-4) to generate detailed descriptions and improve the recommendations based on user preferences.
 
+### Design Decisions and Trade-offs
+- While developing this recommendation system with RAG, several important design decisions and trade-offs were made:
+
+- Model Choice (Mistral 7B Instruct):
+We chose the Mistral 7B Instruct model for its capability to generate rich and context-aware product recommendations. However, due to its large size, the model can be slow to run on a CPU, especially with more complex queries. For optimal performance, it's recommended to run the model on a GPU.
+
+- Speed vs. Accuracy:
+While faster models may offer reduced latency, they tend to be less accurate, especially in terms of generating meaningful and personalized descriptions. Therefore, we opted for the more accurate, but slower Mistral 7B model, which provides a better balance between recommendation quality and model performance. For real-time applications, a compromise could be considered depending on the specific use case.
+
+- Backend (FastAPI):
+FastAPI was chosen due to its simplicity, speed, and flexibility in handling asynchronous tasks. This enables us to handle requests efficiently even though we are working with potentially time-consuming processes like embedding generation and LLM inference.
+
+- Frontend Interaction:
+A simple HTML/JavaScript frontend was created to interact with the FastAPI backend. This decision was made for rapid prototyping and ease of demonstration, but for a production-grade application, a more sophisticated frontend (e.g., React or Angular) could be used.
+
+- Mock Data:
+For demonstration purposes, we used mock product data and a simple recommendation algorithm. While this serves the prototype's purpose, for a real-world application, connecting to a live product database with real-time updates would be crucial for delivering accurate recommendations.
+
+- Model and System Scalability:
+While this system works for smaller datasets and local use cases, scaling it for large-scale production would require optimizations in both data storage (e.g., using cloud solutions) and model performance (e.g., distributed inference for LLMs).
+
+- These trade-offs were necessary to balance the quality of the recommendations, the computational resources available, and the speed at which the system needs to operate.
+  
 ### Areas for Improvement or Expansion
 
 1. **Enhanced Recommendation Algorithm**: 
