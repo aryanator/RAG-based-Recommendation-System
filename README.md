@@ -66,6 +66,27 @@ recommendation-system/
    npm install -g http-server
    ```
 
+#### Setting Up Hugging Face Token
+
+To interact with the Mistral model, you need a Hugging Face API token. **Do not hardcode your token directly** in the code for security purposes.
+
+- **Option 1: Use a placeholder**  
+  Open the `main.py` file and replace the `YOUR_HUGGING_FACE_TOKEN` placeholder with your actual Hugging Face token.
+  
+  ```python
+  token = "YOUR_HUGGING_FACE_TOKEN"
+  ```
+
+- **Option 2: Use a `.env` file**  
+  Alternatively, set up the token in an `.env` file for better security.  
+  - Create a file named `.env` in the root directory of the project and add the following line:
+  
+    ```bash
+    HF_TOKEN="your_hugging_face_token"
+    ```
+
+  - The application will automatically read this token from the `.env` file when you run it.
+
 #### Running the Backend (FastAPI)
 
 1. Clone this repository to your local machine:
@@ -107,6 +128,7 @@ recommendation-system/
 
 - **RAG Recommendation**:
    Send a `POST` request to `http://127.0.0.1:8000/rag_recommend` with the same format to get the enhanced recommendations with detailed descriptions.
+
 
 ### Assumptions and Simplifications
 
