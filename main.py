@@ -2,8 +2,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Optional
-from recommend import recommend_products  
-from rag_recommend import generate_llm_recommendation  
+from rag_services.recommend import recommend_products  
+from rag_services.rag_recommend import generate_llm_recommendation  
 
 app = FastAPI()
 
